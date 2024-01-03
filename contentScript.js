@@ -3,8 +3,6 @@
 
     const loadButton = () => {
         const skipBtnExists = document.getElementsByClassName("bookmark-btn")[0];
-        counter += 1;
-        console.log(counter);
         if (!skipBtnExists){
             const skipBtn = document.createElement("img");
             skipBtn.src = chrome.runtime.getURL("assets/skip.png");
@@ -21,17 +19,14 @@
             youtubeLeftControls = document.getElementsByClassName("ytp-left-controls")[0];
             youtubeLeftControls.appendChild(skipBtnExists);   
         }
-
-        setTimeout(loadButton, 500);
+        interval = setTimeout(loadButton, 500);
     }
 
     const onSkip = () => {
         youtubePlayer.currentTime = 43200;
-        const skipButton = document.getElementsByClassName('ytp-ad-skip-button-modern')[0]
-        if(skipButton){
-            skipButton.click();
-        }
-        setTimeout(loadButton, 500);
+        let skipButton = document.getElementsByClassName('ytp-ad-skip-button-modern')[0]
+        skipButton.click();
+        loadButton();
 
 
         
