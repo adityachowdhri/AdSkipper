@@ -1,11 +1,10 @@
 (() => {
-    let youtubeLeftControls, youtubePlayer;
-    let interval;
+    let youtubeLeftControls, youtubePlayer, counter;
 
     const loadButton = () => {
         const skipBtnExists = document.getElementsByClassName("bookmark-btn")[0];
-
-
+        counter += 1;
+        console.log(counter);
         if (!skipBtnExists){
             const skipBtn = document.createElement("img");
             skipBtn.src = chrome.runtime.getURL("assets/skip.png");
@@ -18,6 +17,12 @@
             
             youtubeLeftControls.appendChild(skipBtn);
         }
+        if (!skipBtnExists.offsetParent){
+            youtubeLeftControls = document.getElementsByClassName("ytp-left-controls")[0];
+            youtubeLeftControls.appendChild(skipBtnExists);   
+        }
+
+        setTimeout(loadButton, 500);
     }
 
     const onSkip = () => {
@@ -26,6 +31,7 @@
         if(skipButton){
             skipButton.click();
         }
+        setTimeout(loadButton, 500);
 
 
         
@@ -44,11 +50,11 @@
     chrome.runtime.onMessage.addListener((obj, sender, response) => {
         const { type, value, videoId } = obj;
         if (type === "VIDEO") {
-            loadButton();
+            setTimeout(loadButton, 300);
         }
 
       });
-      loadButton();
+    setTimeout(loadButton, 300);
       
 
 
