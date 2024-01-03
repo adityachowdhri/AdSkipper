@@ -1,10 +1,10 @@
 (() => {
     let youtubeLeftControls, youtubePlayer;
+    let interval;
 
     const loadButton = () => {
         const skipBtnExists = document.getElementsByClassName("bookmark-btn")[0];
 
-        const adPreviewContainer = document.querySelector('.ytp-ad-preview-container');
 
         if (!skipBtnExists){
             const skipBtn = document.createElement("img");
@@ -18,22 +18,38 @@
             
             youtubeLeftControls.appendChild(skipBtn);
         }
-
     }
 
     const onSkip = () => {
-        youtubePlayer.currentTime = 300;
+        youtubePlayer.currentTime = 43200;
+        const skipButton = document.getElementsByClassName('ytp-ad-skip-button-modern')[0]
+        if(skipButton){
+            skipButton.click();
+        }
+
+
+        
     }
+    // const removeButton = () => {
+    //     const adPreviewContainer = document.querySelector('.ytp-ad-preview-container');
+    //     const skipBtn = document.getElementsByClassName("bookmark-btn")[0];
+    //     if (!adPreviewContainer){
+    //         skipBtn.remove();
+    //         clearInterval(interval);
+    //     }
+
+
+    // }
 
     chrome.runtime.onMessage.addListener((obj, sender, response) => {
         const { type, value, videoId } = obj;
         if (type === "VIDEO") {
-          loadButton();
+            loadButton();
         }
 
       });
-
       loadButton();
+      
 
 
 

@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const currentVideo = urlParameters.get("v");
   
-
-  
-
   if (activeTab.url.includes("youtube.com/watch") && currentVideo) {
     const container = document.getElementsByClassName("container")[0];
     container.innerHTML = '<div class="title">Get Skipping</div>';
