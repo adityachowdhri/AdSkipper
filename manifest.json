@@ -1,7 +1,7 @@
 {
-    "name": "YTAdSkipper",
-    "version": "1.0.0",
-    "description": "Skip advertisements on YouTube",
+    "name": "skipAway",
+    "version": "0.0.1",
+    "description": "Skip any content on YouTube (including advertisements",
     "permissions": ["tabs"],
     "host_permissions": ["https://*.youtube.com/*"],
     "background": {
@@ -27,7 +27,7 @@
         "24": "assets/skip.png",
         "32": "assets/skip.png"
       },
-      "default_title": "AdSkipper",
+      "default_title": "skipAway",
       "default_popup": "popup.html"
     },
     "manifest_version": 3
