@@ -1,8 +1,6 @@
-**Privacy Policy for [Your Chrome Extension Name]**
+## **Privacy Policy for skipAway**
 
-Last updated: [Date]
-
-[Your Company/Developer Name] ("us", "we", or "our") operates the [Your Chrome Extension Name] extension (the "Extension").
+Last updated: 01/04/2024
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal information when you use our Extension.
 
@@ -12,7 +10,7 @@ By using the Extension, you agree to the collection and use of information in ac
 
 #### Personal Data
 
-The [Your Chrome Extension Name] extension does not collect any personally identifiable information. We do not have access to your personal data, and we do not store or share any such information.
+skipAway extension does not collect any personally identifiable information. We do not have access to your personal data, and we do not store or share any such information.
 
 #### User Activity Monitoring
 
@@ -40,6 +38,6 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ### Contact Us
 
-If you have any questions or concerns about our Privacy Policy, please contact us at [your contact email address].
+If you have any questions or concerns about our Privacy Policy, please contact us at adityachowdhri123@gmail.com.
 
 
