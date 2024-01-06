@@ -1,7 +1,7 @@
 {
     "name": "skipAway",
     "version": "0.0.1",
-    "description": "Skip any content on YouTube (including advertisements",
+    "description": "Skip any content on YouTube (including advertisements)",
     "permissions": ["tabs"],
     "host_permissions": ["https://*.youtube.com/*"],
     "background": {

@@ -3,7 +3,8 @@ Chrome Extension to skip ads on YouTube
 
 ## Get Started 
 
-Currently not published on the chrome web app but to use the extension or customize it follow these steps: </n>
+Source code is available here but to download the extension you may visit the chrome store: </n>
+Alternatively to use and edit locally the source code can be found here</n>
 1. Download/fork source code from this repo </n>
 2. Click the puzzle Icon in top right corner of chrome </n>
 3. Change to developer mode </n>
